@@ -18,6 +18,9 @@ def trim_content(content)
 end
 
 loop do
+  # 遅延処理
+  sleep(300)
+  
   begin
     # クライアントを初期化
     mastodon_client = Mastodon::REST::Client.new(base_url: ENV['MASTODON_URL'], bearer_token: ENV['ACCESS_TOKEN'])
@@ -55,9 +58,6 @@ loop do
 
       # 通知の削除
       mastodon_client.clear_notifications
-
-      # 遅延処理
-      sleep(300)
     end
   rescue => e
     logger.error("Error!")
