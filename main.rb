@@ -11,7 +11,7 @@ logger = Logger.new(STDERR)
 
 # 投稿のトリミング処理
 def trim_content(content)
-  content.gsub(/<p>|<\/p>|<span>|<\/span>|<span class="h-card"><a href="#{ENV['MASTODON_URL']}\/@fedi_mail" class="u-url mention" rel="nofollow noopener noreferrer" target="_blank">|<span class="h-card"><a href="#{ENV['MASTODON_URL']}\/@fedi_mail" class="u-url mention">/, '')
+  content.gsub(/<p>|<\/p>|<span>|<\/span>|<span class="h-card"><a href="#{ENV['MASTODON_URL']}\/@Creatodon" class="u-url mention" rel="nofollow noopener noreferrer" target="_blank">|<span class="h-card"><a href="#{ENV['MASTODON_URL']}\/@Creatodon" class="u-url mention">/, '')
     .sub(/@Creatodon<\/a>/, '')
     .gsub(/<br \/>/, '')
     .gsub(/<br>/, '')
