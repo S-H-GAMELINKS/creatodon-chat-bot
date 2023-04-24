@@ -57,7 +57,7 @@ loop do
       mastodon_client.clear_notifications
 
       # 遅延処理
-      sleep(30)
+      sleep(300)
     end
   rescue => e
     logger.error("Error!")
