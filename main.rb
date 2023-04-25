@@ -56,9 +56,10 @@ loop do
       # メンションに返信
       mastodon_client.create_status("@#{status.account.acct}\n#{response_content}", {in_reply_to_id: status.id, visibility: status.visibility})
 
-      # 通知の削除
-      mastodon_client.clear_notifications
     end
+
+    # 通知の削除
+    mastodon_client.clear_notifications
   rescue => e
     logger.error("Error!")
     logger.error(e.full_message)
